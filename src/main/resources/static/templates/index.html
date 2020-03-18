@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="employeesApp">
+<head>
+<!--
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+ -->
+<title>Management Employees</title>
+
+<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="css/main.css" />
+</head>
+
+<!-- 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ -->
+<body>
+	<div ui-view="navbar"></div>
+
+	<!-- Begin page content -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 hidden-xs">
+				<img src="images/logo-neo4j.png" class="img-responsive">
+			</div> 
+			<div class="col-sm-8 col-xs-12">
+				<div ui-view="content"></div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted">&copy; 2020 Esma BEN HABIB.</p>
+		</div>
+	</footer>
+
+	<!-- build:js(src/main/web) scripts/vendor.js -->
+	<!-- bower:js -->
+
+	<script src="libs/jquery/dist/jquery.js"></script>
+	<script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="libs/angular/angular.js"></script>
+	<script src="libs/angular/angular.min.js"></script>
+	<script src="libs/json3/lib/json3.js"></script>
+	<script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="libs/angular-resource/angular-resource.js"></script>
+	<script src="libs/angular-sanitize/angular-sanitize.js"></script>
+	<script src="libs/checklist-model/checklist-model.js"></script>
+	<script src="libs/jsog/lib/JSOG.js"></script>
+	<script src="js/lib/localforage.min.js"></script>
+	<script src="js/lib/ngStorage.min.js"></script>
+
+	<!-- endbower -->
+	<!-- endbuild -->
+
+
+	<script src="js/app/app.js"></script>
+	<script src="js/app/navbar.directive.js"></script>
+	<script src="js/app/error/error.js"></script>
+	<script src="js/app/main/main.js"></script>
+	<script src="js/app/main/MainController.js"></script>
+	<script src="js/app/entities/entity.js"></script>
+	<script src="js/app/entities/employee/EmployeeService.js"></script>
+	<script src="js/app/entities/employee/EmployeeController.js"></script>
+	<script src="js/app/entities/employee/EmployeeDetailController.js"></script>
+</body>
+</html>

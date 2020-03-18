@@ -1,0 +1,68 @@
+
+<div class="panel panel-default">
+	<!-- Default panel contents -->
+	<div class="panel-heading">
+		<span class="lead">Employee </span>
+	</div>
+	<div class="panel-body">
+		<div class="formcontainer">
+			<div class="alert alert-success" role="alert" ng-if="successMessage">{{successMessage}}</div>
+			<div class="alert alert-danger" role="alert" ng-if="errorMessage">{{errorMessage}}</div>
+			<form ng-submit="submit()" name="myForm" class="form-horizontal">
+				<input type="hidden" ng-model="employee.employeeId" />
+				<div class="row">
+					<div class="form-group col-md-12">
+						<label class="col-md-2 control-lable" for="uname">Name</label>
+						<div class="col-md-7">
+							<input type="text" ng-model="employee.name" id="uname"
+								class="form-control input-sm" placeholder="Enter your name"
+								required ng-minlength="3" />
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-md-12">
+						<label class="col-md-2 control-lable" for="supervisors">Supervisors</label>
+						<div class="col-md-7">
+							<input type="text" ng-model="supervisors" id="supervisors"
+								ng-list class="form-control input-sm"
+								placeholder="Enter names and use comma to separate supervisors" />
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-md-12">
+						<label class="col-md-2 control-lable" for="collaborators">Collaborators</label>
+						<div class="col-md-7">
+							<input type="text" ng-model="collaborators" id="collaborators"
+								ng-list class="form-control input-sm"
+								placeholder="Enter names and use comma to separate collaborators" />
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-actions float-left">
+						<input type="submit" value="Create" class="btn btn-primary btn-sm">
+						<button type="button" ng-click="reset()"
+							class="btn btn-warning btn-sm">Reset Form</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="table-responsive">
+			<p>{{employee.name | json}}</p>
+		</div>
+	</div>
+</div>
+<div class="panel panel-default">
+	<!-- Default panel contents -->
+	<div class="panel-heading">
+		<span class="lead">List of Employees </span>
+	</div>
+	<div class="panel-body">
+		<p>{{employee | json}}</p>
+	</div>
+</div>

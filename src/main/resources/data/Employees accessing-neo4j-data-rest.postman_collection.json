@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "741e4c1d-a2b6-4a82-958d-86954a27b823",
+		"name": "Employees accessing-neo4j-data-rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Employee http://localhost:8080/Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Esma BEN HABIB\",\n\t\"collaborators\": [\n\t\t\t{\"name\": \"Paul BERT\"},\n\t\t\t{\"name\": \"Kate Watt\"},\n\t\t\t{\"name\": \"Dominic Fox\"},\n\t\t\t{\"name\": \"Jonas Partner\"},\n\t\t\t{\"name\": \"Tareq Abedrabbo\"}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Employees http://localhost:8080/Employee",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Employees with Supervisor http://localhost:8080/Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Wallace\",\n\t\"supervisors\" : [\n\t\t\t{\n\t\t\t\t\"name\": \"Dolan\", \n\t\t\t\t\"supervisors\" : [\n\t\t\t\t\t{\"name\": \"Davis\", \"collaborators\" :[{\"name\": \"Quinn\"}, {\"name\": \"Sean\"}, {\"name\": \"Troy\"}]}, \n\t\t\t\t\t{\"name\": \"Logan\", \"collaborators\" :[{\"name\": \"Kane\"}, {\"name\": \"Leonard\"}, {\"name\": \"Stephen\"}]}, \n\t\t\t\t\t{\"name\": \"Xavier\", \"collaborators\" :[{\"name\": \"Bob\"}, {\"name\": \"Jason\"}, {\"name\": \"Perry\"}]}\n\t\t\t\t]\n\t\t\t\t\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Tucker\", \n\t\t\t\t\"supervisors\" : [\n\t\t\t\t\t{\"name\": \"Bruce\", \"collaborators\" :[{\"name\": \"Hashim\"}, {\"name\": \"Kyle\"}, {\"name\": \"Levi\"}]}, \n\t\t\t\t\t{\"name\": \"Magee\", \"collaborators\" :[{\"name\": \"Forrest\"}, {\"name\": \"Matthew\"}, {\"name\": \"Vaughan\"}]}, \n\t\t\t\t\t{\"name\": \"Todd\", \"collaborators\" :[{\"name\": \"Amos\"}, {\"name\": \"Henry\"}, {\"name\": \"Jermaine\"}]}\n\t\t\t\t]\n\t\t\t\t\n\t\t\t}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

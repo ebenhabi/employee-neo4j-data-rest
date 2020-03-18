@@ -1,0 +1,23 @@
+{
+	"name": "Wallace",
+	"supervisors" : [
+			{
+				"name": "Dolan", 
+				"supervisors" : [
+					{"name": "Davis", "collaborators" :[{"name": "Quinn"}, {"name": "Sean"}, {"name": "Troy"}]}, 
+					{"name": "Logan", "collaborators" :[{"name": "Kane"}, {"name": "Leonard"}, {"name": "Stephen"}]}, 
+					{"name": "Xavier", "collaborators" :[{"name": "Bob"}, {"name": "Jason"}, {"name": "Perry"}]}
+				]
+				
+			},
+			{
+				"name": "Tucker", 
+				"supervisors" : [
+					{"name": "Bruce", "collaborators" :[{"name": "Hashim"}, {"name": "Kyle"}, {"name": "Levi"}]}, 
+					{"name": "Magee", "collaborators" :[{"name": "Forrest"}, {"name": "Matthew"}, {"name": "Vaughan"}]}, 
+					{"name": "Todd", "collaborators" :[{"name": "Amos"}, {"name": "Henry"}, {"name": "Jermaine"}]}
+				]
+				
+			}
+		]
+}
