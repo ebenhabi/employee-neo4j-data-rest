@@ -39,8 +39,8 @@ You will need to following to run this application:
 Either [download](https://github.com/neo4j-examples/sdn-university/archive/master.zip) the application or use `git` to clone the application:
 
 ```
-git clone git@github.com:neo4j-examples/sdn-university.git
-cd sdn-university
+git clone https://github.com/ebenhabi/employee-neo4j-data-rest.git
+cd cd employee-neo4j-data-rest
 ```
 
 ### Starting the application
